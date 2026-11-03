@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Déclic Admin : les démarches administratives expliquées simplement aux jeunes de 18 à 25 ans.">
+  <title>Déclic Admin — Tes démarches, simplement</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #172b4d;
+      line-height: 1.6;
+    }
+    header {
+      background: #102a43;
+      color: white;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2rem; }
+    header p { margin-bottom: 0; }
+    nav {
+      background: white;
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #075985;
+      margin: 0 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main { max-width: 850px; margin: auto; padding: 20px; }
+    .hero {
+      background: #dff3f0;
+      padding: 28px;
+      border-radius: 18px;
+      margin: 20px 0;
+    }
+    .hero h2 { color: #075985; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px #0000000c;
+    }
+    .card h3 { color: #075985; }
+    button {
+      background: #087e8b;
+      color: white;
+      border: 0;
+      padding: 12px 18px;
+      border-radius: 9px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    a { color: #075985; }
+    footer {
+      background: #102a43;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 35px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Déclic Admin</h1>
+    <p>Tes démarches administratives, simplement.</p>
+  </header>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#guides">Guides</a>
+    <a href="#outils">Outils</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="accueil">
+      <h2>18–25 ans : prends les commandes de tes démarches !</h2>
+      <p>Tu ne sais pas par où commencer pour tes papiers, tes aides ou ton logement ? Déclic Admin t'aide à comprendre les démarches, étape par étape.</p>
+      <a href="#guides"><button>Découvrir les guides</button></a>
+    </section>
+
+    <section id="guides">
+      <h2>Les démarches essentielles</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>🪪 Carte d'identité</h3>
+          <p>Comprendre les étapes pour demander ou renouveler ta carte d'identité.</p>
+          <a href="https://www.service-public.fr/particuliers/vosdroits/N358" target="_blank" rel="noopener">Consulter les informations officielles</a>
+        </article>
+        <article class="card">
+          <h3>🏠 Logement</h3>
+          <p>Découvrir les aides et les démarches utiles pour ton logement.</p>
+          <a href="https://www.service-public.fr/particuliers/vosdroits/N20360" target="_blank" rel="noopener">Voir les informations officielles</a>
+        </article>
+        <article class="card">
+          <h3>💼 Travail</h3>
+          <p>Comprendre tes droits et les démarches liées à ton emploi.</p>
+          <a href="https://www.service-public.fr/particuliers/vosdroits/N19806" target="_blank" rel="noopener">Découvrir tes droits</a>
+        </article>
+        <article class="card">
+          <h3>💶 Aides financières</h3>
+          <p>Découvrir les dispositifs qui peuvent t'aider selon ta situation.</p>
+          <a href="https://www.mesdroitssociaux.gouv.fr/" target="_blank" rel="noopener">Explorer tes droits</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="outils">
+      <h2>Ton petit outil pratique</h2>
+      <div class="card">
+        <h3>Ma checklist administrative</h3>
+        <p>Coche les démarches que tu as déjà réalisées :</p>
+        <label><input type="checkbox"> J'ai vérifié mes papiers d'identité</label><br>
+        <label><input type="checkbox"> J'ai créé mon espace personnel utile</label><br>
+        <label><input type="checkbox"> J'ai vérifié mes droits aux aides</label><br>
+        <label><input type="checkbox"> J'ai rangé mes documents importants</label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Déclic Admin</strong> — Comprendre ses droits pour avancer.</p>
+    <p>Les informations sont à vérifier auprès des organismes officiels.</p>
+  </footer>
+</body>
+</html>
