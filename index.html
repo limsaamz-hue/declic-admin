@@ -2,195 +2,314 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102b46">
-  <meta name="description" content="Déclic Admin accompagne les 18-25 ans dans leurs démarches administratives : logement, santé, emploi, aides et papiers.">
-  <title>Déclic Admin – Tes démarches, enfin simples !</title>
-  <style>
-    :root {
-      --bleu:#102b46;
-      --bleu2:#174c70;
-      --vert:#0b8b78;
-      --fond:#f4f7fa;
-      --texte:#203044;
-      --blanc:#fff;
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:var(--fond);
-      color:var(--texte);
-      line-height:1.6;
-    }
-    header {
-      background:var(--bleu);
-      color:white;
-      padding:17px 6%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-    .logo { font-size:24px; font-weight:800; }
-    .logo span { color:#54d5bb; }
-    nav { display:flex; gap:17px; flex-wrap:wrap; }
-    nav a { color:white; text-decoration:none; font-weight:bold; font-size:14px; }
-    nav a:hover { color:#54d5bb; }
-    .hero {
-      background:linear-gradient(135deg,#102b46,#17617a);
-      color:white;
-      padding:65px 7%;
-      text-align:center;
-    }
-    .hero h1 { font-size:clamp(30px,6vw,48px); line-height:1.15; max-width:750px; margin:0 auto 18px; }
-    .hero p { max-width:650px; margin:0 auto 25px; font-size:18px; color:#e1edf4; }
-    .bouton {
-      display:inline-block;
-      background:#54d5bb;
-      color:#102b46;
-      padding:13px 21px;
-      border-radius:9px;
-      text-decoration:none;
-      font-weight:bold;
-      border:0;
-      cursor:pointer;
-      font-size:15px;
-    }
-    .bouton:hover { opacity:.88; }
-    .bouton-secondaire { background:#e8f4f2; color:#075c53; }
-    main { max-width:1100px; margin:auto; padding:35px 18px; }
-    section { margin-bottom:48px; scroll-margin-top:20px; }
-    h2 { color:var(--bleu); font-size:27px; }
-    .intro { color:#596b7d; }
-    .recherche { display:flex; gap:9px; margin:20px 0; }
-    .recherche input {
-      flex:1; min-width:0; padding:14px;
-      border:1px solid #ccd7e0; border-radius:9px; font-size:16px;
-    }
-    .grille {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:17px;
-    }
-    .carte {
-      background:white;
-      border:1px solid #e5ebf0;
-      padding:21px;
-      border-radius:14px;
-      box-shadow:0 3px 12px #102b4610;
-    }
-    .icone { font-size:30px; }
-    .carte h3 { color:var(--bleu2); margin:8px 0; }
-    .carte p { color:#596b7d; }
-    .carte a { color:#087b70; font-weight:bold; }
-    .etiquette {
-      display:inline-block;
-      background:#e5f5f1;
-      color:#086c5d;
-      border-radius:20px;
-      padding:4px 10px;
-      font-size:12px;
-      font-weight:bold;
-    }
-    .bloc {
-      background:white;
-      border-radius:14px;
-      padding:23px;
-      border:1px solid #e5ebf0;
-    }
-    .ligne {
-      display:flex;
-      gap:12px;
-      padding:11px 0;
-      border-bottom:1px solid #edf0f3;
-      align-items:flex-start;
-    }
-    .ligne input { width:19px; height:19px; margin-top:4px; accent-color:var(--vert); }
-    .progression {
-      height:10px;
-      background:#e8edf1;
-      border-radius:20px;
-      overflow:hidden;
-      margin:12px 0;
-    }
-    #barre { height:100%; width:0; background:var(--vert); transition:.3s; }
-    .quiz-resultat {
-      margin-top:15px;
-      padding:13px;
-      background:#e5f5f1;
-      border-radius:9px;
-      display:none;
-    }
-    footer {
-      background:var(--bleu);
-      color:white;
-      padding:30px 20px;
-      text-align:center;
-    }
-    footer a { color:#7ce5d0; }
-    .petit { font-size:13px; color:#637486; }
-    @media(max-width:600px) {
-      header { justify-content:center; text-align:center; }
-      nav { justify-content:center; }
-      .hero { padding:48px 20px; }
-      .recherche { flex-direction:column; }
-      .recherche button { width:100%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102b46">
+<meta name="description" content="Déclic Admin accompagne les jeunes de 18 à 25 ans dans leurs démarches administratives, leurs droits et leurs aides.">
+<title>Déclic Admin | Tes démarches, simplement</title>
+
+<style>
+:root {
+  --bleu:#102b46;
+  --bleu-clair:#194f70;
+  --vert:#0b8b78;
+  --fond:#f4f7fa;
+  --texte:#263747;
+  --blanc:#ffffff;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--fond);
+  color:var(--texte);
+  line-height:1.6;
+}
+header {
+  background:var(--bleu);
+  color:white;
+  padding:18px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.logo {
+  font-size:25px;
+  font-weight:800;
+}
+.logo span { color:#55d8bb; }
+nav {
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+nav a {
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+}
+nav a:hover { color:#55d8bb; }
+
+.hero {
+  background:linear-gradient(135deg,#102b46,#17617a);
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
+.hero h1 {
+  max-width:800px;
+  margin:0 auto 18px;
+  font-size:clamp(30px,6vw,49px);
+  line-height:1.15;
+}
+.hero p {
+  max-width:650px;
+  margin:0 auto 27px;
+  color:#e1edf4;
+  font-size:18px;
+}
+.bouton {
+  display:inline-block;
+  background:#55d8bb;
+  color:#102b46;
+  border:0;
+  border-radius:9px;
+  padding:13px 20px;
+  font-size:15px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+}
+.bouton:hover { opacity:.85; }
+.bouton-secondaire {
+  background:#e4f3ef;
+  color:#086c5d;
+}
+main {
+  max-width:1100px;
+  margin:auto;
+  padding:30px 18px;
+}
+section {
+  margin-bottom:48px;
+  scroll-margin-top:20px;
+}
+h2 {
+  color:var(--bleu);
+  font-size:27px;
+}
+.intro { color:#627384; }
+.bloc {
+  background:white;
+  border:1px solid #e5ebf0;
+  border-radius:15px;
+  padding:24px;
+  box-shadow:0 3px 12px #102b4610;
+}
+.grille {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:17px;
+}
+.carte {
+  background:white;
+  padding:21px;
+  border-radius:14px;
+  border:1px solid #e5ebf0;
+  box-shadow:0 3px 12px #102b4610;
+}
+.carte h3 { color:var(--bleu-clair); }
+.carte p { color:#627384; }
+.carte a {
+  color:var(--vert);
+  font-weight:bold;
+}
+.icone { font-size:30px; }
+.etiquette {
+  display:inline-block;
+  background:#e5f5f1;
+  color:#086c5d;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+.champ {
+  width:100%;
+  padding:14px;
+  border:1px solid #ccd7e0;
+  border-radius:9px;
+  font-size:16px;
+  margin:10px 0 15px;
+  background:white;
+}
+.recherche {
+  display:flex;
+  gap:10px;
+  margin:20px 0;
+}
+.recherche input {
+  flex:1;
+  min-width:0;
+  margin:0;
+}
+.ligne {
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:11px 0;
+  border-bottom:1px solid #edf0f3;
+}
+.ligne input {
+  width:19px;
+  height:19px;
+  margin-top:5px;
+  accent-color:var(--vert);
+}
+.progression {
+  background:#e8edf1;
+  height:10px;
+  border-radius:20px;
+  overflow:hidden;
+  margin:12px 0;
+}
+#barre {
+  width:0;
+  height:100%;
+  background:var(--vert);
+  transition:width .3s;
+}
+.resultat {
+  display:none;
+  margin-top:18px;
+  padding:17px;
+  border-radius:10px;
+  background:#e5f5f1;
+}
+.resultat h3 { color:#075c53; }
+.resultat a {
+  color:#075c53;
+  font-weight:bold;
+}
+.pet it { font-size:13px; }
+.petit {
+  font-size:13px;
+  color:#627384;
+}
+footer {
+  background:var(--bleu);
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+footer a { color:#72e3cc; }
+footer .petit { color:#d7e5ef; }
+
+@media(max-width:600px) {
+  header {
+    justify-content:center;
+    text-align:center;
+  }
+  nav { justify-content:center; }
+  .hero { padding:48px 20px; }
+  .recherche { flex-direction:column; }
+  .recherche button { width:100%; }
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">Déclic <span>Admin.</span></div>
   <nav>
     <a href="#accueil">Accueil</a>
+    <a href="#assistant">Mon parcours</a>
     <a href="#guides">Guides</a>
     <a href="#checklist">Ma liste</a>
     <a href="#quiz">Quiz</a>
-    <a href="#officiel">Liens utiles</a>
   </nav>
 </header>
 
 <div class="hero" id="accueil">
-  <h1>Les démarches administratives, sans prise de tête !</h1>
+  <h1>Tes démarches administratives, enfin simples !</h1>
   <p>Tu as entre 18 et 25 ans ? Comprends tes droits, découvre les aides disponibles et avance dans tes démarches à ton rythme.</p>
-  <a class="bouton" href="#guides">Je découvre mes démarches</a>
+  <a class="bouton" href="#assistant">Trouver mon parcours</a>
 </div>
 
 <main>
 
 <section>
   <h2>Bienvenue sur Déclic Admin 👋</h2>
-  <p class="intro">L'administration peut sembler compliquée. Ici, on t'explique les démarches avec des mots simples, des étapes claires et des liens vers les bons organismes.</p>
+  <p class="intro">
+    L'administration peut sembler compliquée.
+    Nous t'aidons à comprendre les démarches avec des explications simples,
+    des étapes claires et les bons liens officiels.
+  </p>
 </section>
 
+<!-- ASSISTANT ADMINISTRATIF -->
+
+<section id="assistant">
+  <h2>De quoi as-tu besoin aujourd'hui ?</h2>
+  <p class="intro">
+    Choisis ta situation pour découvrir les premières démarches à effectuer.
+  </p>
+
+  <div class="bloc">
+    <label for="besoin"><strong>Quelle est ta situation ?</strong></label>
+
+    <select id="besoin" class="champ">
+      <option value="">Choisis une situation</option>
+      <option value="logement">🏠 Je cherche un logement</option>
+      <option value="argent">💶 Je manque d'argent</option>
+      <option value="emploi">💼 Je cherche un emploi</option>
+      <option value="etudes">🎓 Je commence mes études</option>
+      <option value="papiers">🪪 Je dois faire mes papiers</option>
+      <option value="depart">🏡 Je quitte le domicile familial</option>
+      <option value="sante">❤️ Je veux m'occuper de ma santé</option>
+      <option value="droits">⚖️ Je veux connaître mes droits</option>
+    </select>
+
+    <button class="bouton" onclick="monParcours()">
+      Découvrir mes démarches
+    </button>
+
+    <div id="parcours" class="resultat" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- GUIDES -->
+
 <section id="guides">
-  <h2>De quoi as-tu besoin ?</h2>
-  <p class="intro">Choisis un thème pour découvrir les informations essentielles.</p>
+  <h2>Toutes les démarches essentielles</h2>
+  <p class="intro">Retrouve les grands domaines de la vie administrative.</p>
 
   <div class="recherche">
-    <input id="recherche" type="search" placeholder="Rechercher : logement, carte d'identité, emploi...">
+    <input class="champ" id="recherche" type="search"
+      placeholder="Rechercher un thème ou une démarche...">
     <button class="bouton" onclick="chercher()">Rechercher</button>
   </div>
 
   <div class="grille" id="cartes">
+
     <article class="carte">
       <div class="icone">🪪</div>
       <span class="etiquette">Identité</span>
       <h3>Papiers et identité</h3>
       <p>Carte d'identité, passeport, recensement et documents importants.</p>
-      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">Consulter les démarches officielles →</a>
+      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">Voir les démarches officielles →</a>
     </article>
 
     <article class="carte">
       <div class="icone">🏠</div>
       <span class="etiquette">Logement</span>
-      <h3>Trouver un logement</h3>
-      <p>Aides au logement, garanties, démarches et droits du locataire.</p>
+      <h3>Logement et installation</h3>
+      <p>Aides au logement, garanties, location et droits du locataire.</p>
       <a href="https://www.caf.fr/" target="_blank" rel="noopener">Découvrir les aides de la CAF →</a>
     </article>
 
@@ -198,7 +317,7 @@
       <div class="icone">💼</div>
       <span class="etiquette">Emploi</span>
       <h3>Travail et emploi</h3>
-      <p>Recherche d'emploi, contrat de travail, chômage et accompagnement.</p>
+      <p>Recherche d'emploi, contrats, accompagnement et droits des salariés.</p>
       <a href="https://www.francetravail.fr/" target="_blank" rel="noopener">Visiter France Travail →</a>
     </article>
 
@@ -206,15 +325,15 @@
       <div class="icone">💶</div>
       <span class="etiquette">Finances</span>
       <h3>Aides financières</h3>
-      <p>Découvrir les aides auxquelles tu pourrais avoir droit selon ta situation.</p>
-      <a href="https://www.mesdroitssociaux.gouv.fr/" target="_blank" rel="noopener">Simuler mes droits →</a>
+      <p>Découvrir les aides et dispositifs adaptés à ta situation.</p>
+      <a href="https://www.mesdroitssociaux.gouv.fr/" target="_blank" rel="noopener">Estimer mes droits →</a>
     </article>
 
     <article class="carte">
       <div class="icone">❤️</div>
       <span class="etiquette">Santé</span>
       <h3>Santé et assurance maladie</h3>
-      <p>Carte Vitale, compte Ameli, complémentaire santé et accès aux soins.</p>
+      <p>Carte Vitale, compte Ameli, couverture santé et accès aux soins.</p>
       <a href="https://www.ameli.fr/" target="_blank" rel="noopener">Visiter Ameli →</a>
     </article>
 
@@ -222,7 +341,7 @@
       <div class="icone">🎓</div>
       <span class="etiquette">Études</span>
       <h3>Études et formation</h3>
-      <p>Bourses, orientation, formation et accompagnement des jeunes.</p>
+      <p>Bourses, orientation, formations et accompagnement des jeunes.</p>
       <a href="https://www.etudiant.gouv.fr/" target="_blank" rel="noopener">Voir les aides étudiantes →</a>
     </article>
 
@@ -231,46 +350,84 @@
       <span class="etiquette">Mobilité</span>
       <h3>Permis et transports</h3>
       <p>Permis de conduire, aides à la mobilité et transports.</p>
-      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">Voir les informations officielles →</a>
+      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">Voir les informations →</a>
     </article>
 
     <article class="carte">
       <div class="icone">📄</div>
-      <span class="etiquette">Vie quotidienne</span>
-      <h3>Impôts et démarches</h3>
+      <span class="etiquette">Impôts</span>
+      <h3>Impôts et fiscalité</h3>
       <p>Déclaration de revenus, numéro fiscal et espace personnel.</p>
       <a href="https://www.impots.gouv.fr/" target="_blank" rel="noopener">Visiter les impôts →</a>
     </article>
+
+    <article class="carte">
+      <div class="icone">👨‍👩‍👧</div>
+      <span class="etiquette">Famille</span>
+      <h3>Vie familiale</h3>
+      <p>Famille, démarches personnelles et accompagnement social.</p>
+      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">Consulter Service Public →</a>
+    </article>
+
+    <article class="carte">
+      <div class="icone">🏛️</div>
+      <span class="etiquette">Accompagnement</span>
+      <h3>Se faire accompagner</h3>
+      <p>Découvrir les services qui peuvent t'aider gratuitement.</p>
+      <a href="https://www.france-services.gouv.fr/" target="_blank" rel="noopener">Trouver France Services →</a>
+    </article>
+
   </div>
-  <p id="aucun" style="display:none;">Aucun thème trouvé. Essaie un autre mot.</p>
+
+  <p id="aucun" style="display:none;">Aucun résultat trouvé. Essaie un autre mot.</p>
 </section>
+
+<!-- LISTE PERSONNELLE -->
 
 <section id="checklist">
   <h2>Ma liste de démarches ✅</h2>
-  <p class="intro">Coche ce que tu as déjà fait. Ta progression est enregistrée sur cet appareil.</p>
+  <p class="intro">
+    Coche les démarches que tu as réalisées.
+    Ta progression est mémorisée sur cet appareil.
+  </p>
+
   <div class="bloc">
     <strong id="compteur">0 démarche sur 8 terminée</strong>
-    <div class="progression"><div id="barre"></div></div>
+    <div class="progression">
+      <div id="barre"></div>
+    </div>
+
     <div id="liste">
-      <label class="ligne"><input type="checkbox" data-id="1"> Vérifier la validité de mes papiers d'identité</label>
-      <label class="ligne"><input type="checkbox" data-id="2"> Créer ou vérifier mon compte Ameli</label>
+      <label class="ligne"><input type="checkbox" data-id="1"> Vérifier mes papiers d'identité</label>
+      <label class="ligne"><input type="checkbox" data-id="2"> Vérifier mon compte Assurance Maladie</label>
       <label class="ligne"><input type="checkbox" data-id="3"> Me renseigner sur les aides au logement</label>
       <label class="ligne"><input type="checkbox" data-id="4"> Vérifier mes droits aux aides sociales</label>
-      <label class="ligne"><input type="checkbox" data-id="5"> Préparer un CV si je cherche un emploi</label>
+      <label class="ligne"><input type="checkbox" data-id="5"> Préparer mon CV si je cherche un emploi</label>
       <label class="ligne"><input type="checkbox" data-id="6"> Vérifier ma situation fiscale</label>
       <label class="ligne"><input type="checkbox" data-id="7"> Ranger mes documents importants</label>
       <label class="ligne"><input type="checkbox" data-id="8"> Repérer les services utiles près de chez moi</label>
     </div>
-    <button class="bouton bouton-secondaire" onclick="reinitialiser()" style="margin-top:15px;">Recommencer ma liste</button>
-    <p class="petit">Les cases sont enregistrées uniquement dans le navigateur de cet appareil. Elles ne sont pas envoyées à un serveur.</p>
+
+    <button class="bouton bouton-secondaire" onclick="reinitialiser()" style="margin-top:18px;">
+      Recommencer ma liste
+    </button>
+
+    <p class="petit">
+      Cette liste est enregistrée dans le navigateur de cet appareil.
+      Elle n'est pas envoyée à un serveur.
+    </p>
   </div>
 </section>
 
+<!-- QUIZ -->
+
 <section id="quiz">
   <h2>Quel est ton prochain déclic ? 🎯</h2>
+
   <div class="bloc">
     <p><strong>Quelle démarche souhaites-tu réaliser en priorité ?</strong></p>
-    <select id="choix" style="width:100%;padding:13px;border:1px solid #ccd7e0;border-radius:8px;font-size:16px;">
+
+    <select id="choix" class="champ">
       <option value="">Choisis une réponse</option>
       <option value="logement">Trouver un logement</option>
       <option value="emploi">Trouver un emploi</option>
@@ -279,37 +436,48 @@
       <option value="papiers">Faire mes papiers</option>
       <option value="etudes">Financer mes études</option>
     </select>
-    <button class="bouton" onclick="conseiller()" style="margin-top:15px;">Voir mon conseil</button>
-    <div class="quiz-resultat" id="resultat"></div>
+
+    <button class="bouton" onclick="conseiller()">Voir mon conseil</button>
+    <div id="resultatQuiz" class="resultat" aria-live="polite"></div>
   </div>
 </section>
 
+<!-- SITES OFFICIELS -->
+
 <section id="officiel">
   <h2>Les sites officiels à connaître 🔎</h2>
+
   <div class="grille">
-    <div class="carte">
+    <article class="carte">
       <h3>Service Public</h3>
       <p>Les démarches et les règles administratives.</p>
-      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">service-public.fr →</a>
-    </div>
-    <div class="carte">
+      <a href="https://www.service-public.fr/" target="_blank" rel="noopener">Consulter le site →</a>
+    </article>
+
+    <article class="carte">
       <h3>France Services</h3>
-      <p>Un accompagnement humain pour tes démarches.</p>
-      <a href="https://www.france-services.gouv.fr/" target="_blank" rel="noopener">France Services →</a>
-    </div>
-    <div class="carte">
+      <p>Un accompagnement humain pour les démarches.</p>
+      <a href="https://www.france-services.gouv.fr/" target="_blank" rel="noopener">Trouver un service →</a>
+    </article>
+
+    <article class="carte">
       <h3>Mes droits sociaux</h3>
       <p>Estimer les aides auxquelles tu pourrais avoir droit.</p>
-      <a href="https://www.mesdroitssociaux.gouv.fr/" target="_blank" rel="noopener">Mes droits sociaux →</a>
-    </div>
+      <a href="https://www.mesdroitssociaux.gouv.fr/" target="_blank" rel="noopener">Estimer mes droits →</a>
+    </article>
   </div>
 </section>
 
 <section>
   <div class="bloc">
-    <h2>Un doute ? Fais-toi accompagner.</h2>
-    <p>Tu peux demander de l'aide à un conseiller France Services, à une mission locale ou directement à l'organisme concerné.</p>
-    <a class="bouton" href="https://www.france-services.gouv.fr/" target="_blank" rel="noopener">Trouver France Services</a>
+    <h2>Tu as besoin d'un accompagnement ?</h2>
+    <p>
+      Tu peux demander de l'aide à un conseiller France Services,
+      à une mission locale ou directement à l'organisme concerné.
+    </p>
+    <a class="bouton" href="https://www.france-services.gouv.fr/" target="_blank" rel="noopener">
+      Trouver France Services
+    </a>
   </div>
 </section>
 
@@ -319,82 +487,214 @@
   <div class="logo">Déclic <span>Admin.</span></div>
   <p>Comprendre ses droits pour avancer.</p>
   <p><a href="https://www.service-public.fr/" target="_blank" rel="noopener">Informations officielles</a></p>
-  <p class="petit" style="color:#d7e5ef;">Déclic Admin est un site d'information indépendant. Il ne remplace pas les organismes officiels. Les droits et les aides dépendent de chaque situation et peuvent évoluer.</p>
-  <p class="petit" style="color:#d7e5ef;">© 2026 Déclic Admin</p>
+  <p class="petit">
+    Déclic Admin est un site d'information indépendant.
+    Il ne remplace pas les organismes officiels.
+    Les aides et les droits dépendent de chaque situation et peuvent évoluer.
+  </p>
+  <p class="petit">© 2026 Déclic Admin</p>
 </footer>
 
 <script>
-  // Recherche dans les thèmes
-  function chercher() {
-    const mot = document.getElementById("recherche").value.toLowerCase().trim();
-    const cartes = document.querySelectorAll("#cartes .carte");
-    let visibles = 0;
 
-    cartes.forEach(carte => {
-      const correspond = carte.textContent.toLowerCase().includes(mot);
-      carte.style.display = correspond ? "" : "none";
-      if (correspond) visibles++;
-    });
+// ASSISTANT ADMINISTRATIF
 
-    document.getElementById("aucun").style.display = visibles ? "none" : "block";
+function monParcours() {
+  const besoin = document.getElementById("besoin").value;
+  const zone = document.getElementById("parcours");
+
+  const parcours = {
+    logement: {
+      titre:"Ton parcours logement 🏠",
+      texte:"Commence par te renseigner sur les aides au logement, préparer tes justificatifs et découvrir les garanties locatives.",
+      lien:"https://www.caf.fr/",
+      nom:"Consulter la CAF"
+    },
+    argent: {
+      titre:"Tes aides financières 💶",
+      texte:"Vérifie les aides auxquelles tu pourrais avoir droit et découvre les dispositifs adaptés à ta situation.",
+      lien:"https://www.mesdroitssociaux.gouv.fr/",
+      nom:"Estimer mes droits"
+    },
+    emploi: {
+      titre:"Ton parcours emploi 💼",
+      texte:"Prépare ton CV, découvre les offres et renseigne-toi sur les accompagnements destinés aux jeunes.",
+      lien:"https://www.francetravail.fr/",
+      nom:"Découvrir France Travail"
+    },
+    etudes: {
+      titre:"Ton parcours études 🎓",
+      texte:"Renseigne-toi sur les bourses, les aides étudiantes et les démarches liées à ton inscription.",
+      lien:"https://www.etudiant.gouv.fr/",
+      nom:"Découvrir les aides étudiantes"
+    },
+    papiers: {
+      titre:"Tes papiers administratifs 🪪",
+      texte:"Identifie le document dont tu as besoin et consulte les démarches officielles pour l'obtenir.",
+      lien:"https://www.service-public.fr/",
+      nom:"Consulter Service Public"
+    },
+    depart: {
+      titre:"Ton départ du domicile familial 🏡",
+      texte:"Prépare ton budget, ton logement, tes assurances et tes démarches auprès des organismes concernés.",
+      lien:"https://www.france-services.gouv.fr/",
+      nom:"Trouver France Services"
+    },
+    sante: {
+      titre:"Ta santé ❤️",
+      texte:"Vérifie tes droits à l'Assurance Maladie et découvre les services de santé accessibles.",
+      lien:"https://www.ameli.fr/",
+      nom:"Visiter Ameli"
+    },
+    droits: {
+      titre:"Comprendre tes droits ⚖️",
+      texte:"Découvre les démarches et les services publics qui peuvent t'accompagner.",
+      lien:"https://www.service-public.fr/",
+      nom:"Consulter Service Public"
+    }
+  };
+
+  if (!parcours[besoin]) {
+    zone.style.display="block";
+    zone.textContent="Choisis une situation pour découvrir ton parcours.";
+    return;
   }
 
-  document.getElementById("recherche").addEventListener("input", chercher);
+  const resultat=parcours[besoin];
+  zone.style.display="block";
+  zone.replaceChildren();
 
-  // Liste enregistrée sur l'appareil
-  const cases = document.querySelectorAll("#liste input");
+  const titre=document.createElement("h3");
+  titre.textContent=resultat.titre;
 
-  function actualiserListe() {
-    let total = 0;
-    cases.forEach(c => {
-      c.checked = localStorage.getItem("declic-" + c.dataset.id) === "oui";
-      if (c.checked) total++;
-    });
-    document.getElementById("compteur").textContent =
-      total + " démarche sur 8 terminée" + (total > 1 ? "s" : "");
-    document.getElementById("barre").style.width = (total / 8 * 100) + "%";
-  }
+  const texte=document.createElement("p");
+  texte.textContent=resultat.texte;
 
-  cases.forEach(c => {
-    c.addEventListener("change", () => {
-      localStorage.setItem("declic-" + c.dataset.id, c.checked ? "oui" : "non");
-      actualiserListe();
-    });
+  const lien=document.createElement("a");
+  lien.href=resultat.lien;
+  lien.target="_blank";
+  lien.rel="noopener noreferrer";
+  lien.textContent=resultat.nom+" →";
+
+  zone.append(titre,texte,lien);
+}
+
+// RECHERCHE
+
+function chercher() {
+  const mot=document.getElementById("recherche").value.toLowerCase().trim();
+  const cartes=document.querySelectorAll("#cartes .carte");
+  let visibles=0;
+
+  cartes.forEach(carte=>{
+    const correspond=carte.textContent.toLowerCase().includes(mot);
+    carte.style.display=correspond?"":"none";
+    if(correspond) visibles++;
   });
 
-  function reinitialiser() {
-    if (confirm("Veux-tu vraiment remettre ta liste à zéro ?")) {
-      cases.forEach(c => localStorage.removeItem("declic-" + c.dataset.id));
-      actualiserListe();
+  document.getElementById("aucun").style.display=visibles?"none":"block";
+}
+
+document.getElementById("recherche").addEventListener("input",chercher);
+
+// LISTE DE DEMARCHES
+
+const cases=document.querySelectorAll("#liste input");
+
+function actualiserListe() {
+  let total=0;
+
+  cases.forEach(c=>{
+    c.checked=localStorage.getItem("declic-"+c.dataset.id)==="oui";
+    if(c.checked) total++;
+  });
+
+  document.getElementById("compteur").textContent=
+    total+" démarche"+(total>1?"s":"")+" sur 8 terminée"+(total>1?"s":"");
+
+  document.getElementById("barre").style.width=(total/8*100)+"%";
+}
+
+cases.forEach(c=>{
+  c.addEventListener("change",()=>{
+    localStorage.setItem("declic-"+c.dataset.id,c.checked?"oui":"non");
+    actualiserListe();
+  });
+});
+
+function reinitialiser() {
+  if(confirm("Veux-tu vraiment remettre ta liste à zéro ?")) {
+    cases.forEach(c=>localStorage.removeItem("declic-"+c.dataset.id));
+    actualiserListe();
+  }
+}
+
+actualiserListe();
+
+// QUESTIONNAIRE
+
+function conseiller() {
+  const choix=document.getElementById("choix").value;
+  const zone=document.getElementById("resultatQuiz");
+
+  const conseils={
+    logement:{
+      titre:"Pour ton logement 🏠",
+      texte:"Commence par vérifier les aides au logement et les conditions de location.",
+      lien:"https://www.caf.fr/"
+    },
+    emploi:{
+      titre:"Pour ton emploi 💼",
+      texte:"Découvre les offres et les accompagnements proposés aux personnes en recherche d'emploi.",
+      lien:"https://www.francetravail.fr/"
+    },
+    aides:{
+      titre:"Pour les aides 💶",
+      texte:"Utilise le simulateur officiel pour estimer tes droits selon ta situation.",
+      lien:"https://www.mesdroitssociaux.gouv.fr/"
+    },
+    sante:{
+      titre:"Pour ta santé ❤️",
+      texte:"Vérifie tes droits à l'Assurance Maladie et ton compte personnel.",
+      lien:"https://www.ameli.fr/"
+    },
+    papiers:{
+      titre:"Pour tes papiers 🪪",
+      texte:"Retrouve les démarches officielles pour tes documents et ton identité.",
+      lien:"https://www.service-public.fr/"
+    },
+    etudes:{
+      titre:"Pour tes études 🎓",
+      texte:"Renseigne-toi sur les bourses et les aides proposées aux étudiants.",
+      lien:"https://www.etudiant.gouv.fr/"
     }
+  };
+
+  if(!conseils[choix]) {
+    zone.style.display="block";
+    zone.textContent="Choisis un sujet pour recevoir ton conseil.";
+    return;
   }
 
-  actualiserListe();
+  const c=conseils[choix];
+  zone.style.display="block";
+  zone.replaceChildren();
 
-  // Conseils selon le besoin
-  function conseiller() {
-    const choix = document.getElementById("choix").value;
-    const conseils = {
-      logement: ["Pour le logement", "Commence par consulter les aides au logement et les conditions de location.", "https://www.caf.fr/"],
-      emploi: ["Pour l'emploi", "Tu peux créer ton espace et découvrir les offres et accompagnements disponibles.", "https://www.francetravail.fr/"],
-      aides: ["Pour les aides", "Utilise le simulateur officiel pour estimer tes droits selon ta situation.", "https://www.mesdroitssociaux.gouv.fr/"],
-      sante: ["Pour ta santé", "Vérifie tes droits à l'Assurance Maladie et ton compte personnel.", "https://www.ameli.fr/"],
-      papiers: ["Pour tes papiers", "Retrouve les démarches officielles pour tes documents et ton identité.", "https://www.service-public.fr/"],
-      etudes: ["Pour tes études", "Renseigne-toi sur les bourses et les aides proposées aux étudiants.", "https://www.etudiant.gouv.fr/"]
-    };
+  const titre=document.createElement("h3");
+  titre.textContent=c.titre;
 
-    const resultat = document.getElementById("resultat");
-    if (!conseils[choix]) {
-      resultat.style.display = "block";
-      resultat.textContent = "Choisis un sujet pour recevoir ton conseil.";
-      return;
-    }
+  const texte=document.createElement("p");
+  texte.textContent=c.texte;
 
-    const c = conseils[choix];
-    resultat.style.display = "block";
-    resultat.innerHTML = "<strong>" + c[0] + "</strong><p>" + c[1] +
-      '</p><a href="' + c[2] + '" target="_blank" rel="noopener">Consulter le site officiel →</a>';
-  }
+  const lien=document.createElement("a");
+  lien.href=c.lien;
+  lien.target="_blank";
+  lien.rel="noopener noreferrer";
+  lien.textContent="Consulter le site officiel →";
+
+  zone.append(titre,texte,lien);
+}
+
 </script>
 
 </body>
